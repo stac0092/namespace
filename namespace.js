@@ -1,31 +1,37 @@
-let stac0092 = {
-boxClick: function(){
-	 this.style.borderColor = "pink";
-    this.style.backgroundColor = "purple";
-},
-mouseOver: function(e) {
-    e.target.classList.toggle("highlight");
-	 e.target.removeAttribute('style'); 
+var stac0092  = {
+    boxClick: function () {
+        this.style.borderColor = "black";
+        this.style.backgroundColor = "red";
+        console.log(this);
+    },
 
-},
-mouseOut: function(e) {
-    e.target.classList.toggle("highlight");
-    e.target.removeAttribute('style'); 
-},
-init: function () {
+    mouseOver: function (e) {
+        e.target.classList.toggle("highlight");
+        console.log(e);
+        console.log(e.target);
+    },
 
-        let newBoxSection = document.createElement("square");
+    mouseOut: function (e) {
+        e.target.classList.toggle("highlight");
+        e.target.removeAttribute('style');
+        console.log(e);
+        console.log(e.target);
+    },
+
+    init: function () {
+        let newBoxSection = document.createElement("div");
         newBoxSection.className = "box";
-        newBoxSection.textContent = "stac0092";
-     
-        let box = document.getElementById("boxes");
-        box.appendChild(newBoxSection);
+        newBoxSection.textContent = "stac0092 ";
+        let boxes = document.getElementById("boxes");
+        boxes.appendChild(newBoxSection);
 
-        newBoxSection.addEventListener("click", stac0092.boxClick);
-        newBoxSection.addEventListener("mouseover", stac0092.mouseOver);
-        newBoxSection.addEventListener("mouseout", stac0092.mouseOut);
+
+
+        newBoxSection.addEventListener("click", stac0092 .boxClick);
+        newBoxSection.addEventListener("mouseover", stac0092 .mouseOver);
+        newBoxSection.addEventListener("mouseout", stac0092 .mouseOut);
     }
 
 }
 
-stac0092.init;
+stac0092 .init;
