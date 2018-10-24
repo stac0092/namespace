@@ -34,4 +34,4 @@ var stac0092  = {
 
 }
 
-stac0092 .init;
+stac0092.init;
