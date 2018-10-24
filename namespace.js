@@ -21,7 +21,7 @@ var stac0092  = {
     init: function () {
         let newBoxSection = document.createElement("div");
         newBoxSection.className = "box";
-        newBoxSection.textContent = "stac0092 ";
+        newBoxSection.textContent = "stac0092";
         let boxes = document.getElementById("boxes");
         boxes.appendChild(newBoxSection);
 
