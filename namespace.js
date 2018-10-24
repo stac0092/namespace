@@ -27,9 +27,9 @@ var stac0092  = {
 
 
 
-        newBoxSection.addEventListener("click", stac0092 .boxClick);
-        newBoxSection.addEventListener("mouseover", stac0092 .mouseOver);
-        newBoxSection.addEventListener("mouseout", stac0092 .mouseOut);
+        newBoxSection.addEventListener("click", stac0092.boxClick);
+        newBoxSection.addEventListener("mouseover", stac0092.mouseOver);
+        newBoxSection.addEventListener("mouseout", stac0092.mouseOut);
     }
 
 }
