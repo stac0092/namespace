@@ -1,37 +1,39 @@
-var stac0092  = {
-    boxClick: function () {
-        this.style.borderColor = "black";
-        this.style.backgroundColor = "red";
-        console.log(this);
-    },
+/********************************
+Filename: main.js
+Author: Mackenzie Stack
+Description: Namespace
+Date: Oct 24th 2018
+*********************************/
 
-    mouseOver: function (e) {
-        e.target.classList.toggle("highlight");
-        console.log(e);
-        console.log(e.target);
-    },
 
-    mouseOut: function (e) {
-        e.target.classList.toggle("highlight");
-        e.target.removeAttribute('style');
-        console.log(e);
-        console.log(e.target);
-    },
+
+var STAC0092 = {
 
     init: function () {
-        let newBoxSection = document.createElement("div");
-        newBoxSection.className = "box";
-        newBoxSection.textContent = "stac0092";
+
+        let newBox = document.createElement("div");
+        newBox.className = "box";
+        newBox.textContent = "stac0092";
+
         let boxes = document.getElementById("boxes");
-        boxes.appendChild(newBoxSection);
+        boxes.appendChild(newBox);
 
-
-
-        newBoxSection.addEventListener("click", stac0092.boxClick);
-        newBoxSection.addEventListener("mouseover", stac0092.mouseOver);
-        newBoxSection.addEventListener("mouseout", stac0092.mouseOut);
+        newBox.addEventListener("click", mouseClick);
+        newBox.addEventListener("mouseover", mouseOver);
+        newBox.addEventListener("mouseout", mouseOut);
     }
-
 }
 
-stac0092.init;
+function mouseClick() {
+    this.style.borderColor = "#ffc0cb";
+    this.style.backgroundColor = "#00DDFF";
+}
+
+function mouseOver() {
+    this.classList.toggle("highlight");
+}
+
+function mouseOut() {
+    this.classList.toggle("highlight");
+    this.removeAttribute("style");
+}
